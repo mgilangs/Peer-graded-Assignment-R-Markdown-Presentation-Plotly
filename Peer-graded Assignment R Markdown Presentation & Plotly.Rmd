@@ -1,0 +1,37 @@
+---
+title: 'Peer-graded Assignment: R Markdown Presentation & Plotly'
+author: "Mochamad Gilang Saputra"
+date: "January 3, 2020"
+output:
+  beamer_presentation: default
+  ioslides_presentation: default
+  slidy_presentation: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+Peer-graded Assignment: R Markdown Presentation & Plotly
+
+Create a web page presentation using R Markdown that features a plot created with Plotly. Host your webpage on either GitHub Pages, RPubs, or NeoCities. Your webpage must contain the date that you created the document, and it must contain a plot created with Plotly. We would love to see you show off your creativity!
+
+Developing Data Products
+R Markdown Presentation & Plotly
+Peer-graded Assignment.
+
+
+
+```{r library, echo = TRUE}
+library(plotly)
+```
+
+## Slide with Plot
+```{r plot}
+data(iris)
+
+plot_ly(x= iris$Sepal.Width, y= iris$Sepal.Length, z = iris$Species, 
+type = "scatter3d", mode = "markers", color = iris$Species)
+```
+
